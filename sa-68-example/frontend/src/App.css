@@ -1,0 +1,189 @@
+App.css
+/* ลบ margin/padding ของ body เพื่อให้เต็มจอจริง */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* หน้าเต็มจอ */
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header สีส้มเต็มจอ */
+.header-bar {
+  width: 100vw; /* ให้ชัดเจนว่ากินเต็มจอ */
+  background-color: #ED4192;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.header-bar h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.hotel-name {
+  display: block;
+  font-size: 2.0rem;
+  opacity: 0.9;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+/* เนื้อหาหลัก */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+}
+
+.booking-form {
+  background: white;
+  padding: 3rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-form label {
+  text-align: center;
+}
+
+/* Room List Container */
+.room-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 95vw; /* เกือบเต็มจอ */
+}
+
+/* Room Card - แนวนอน */
+.room-card {
+  display: flex;
+  flex-direction: row; /* เปลี่ยนเป็นแนวนอน */
+  background: white;
+  border: 3px solid #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 90vw; /* เกือบเต็มจอ */
+  min-height: 250px;
+}
+
+/* รูปภาพด้านซ้าย */
+.room-card img {
+  width: 350px; /* ความกว้างคงที่ */
+  height: 250px;
+  object-fit: cover;
+  border: none; /* ลบกรอบเดิม */
+  border-radius: 0; /* ลบมุมโค้ง */
+  justify-content: center;
+
+}
+
+/* รายละเอียดด้านขวา */
+.room-details {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.room-details h2 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.room-details p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.room-details .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ED4192;
+  margin: 1rem 0;
+  text-align: right; /* ชิดขวา */
+}
+
+.room-details button {
+  background: #ED4192;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  align-self: flex-end; /* ชิดขวา */
+  transition: background 0.3s;
+}
+.room-details button:hover {
+  background: #d1327a;
+}
+
+/* Hotel Hero Section */
+.hotel-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.hotel-main-image {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 3px solid #ddd;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .room-card {
+    flex-direction: column; /* กลับเป็นแนวตั้งในมือถือ */
+    max-width: 45vw;
+  }
+  
+  .room-card img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .room-details {
+    padding: 1.5rem;
+  }
+}
+.room-type{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+
+}
+.info-buttons{
+  background: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
